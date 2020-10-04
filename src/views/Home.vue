@@ -13,6 +13,22 @@ export default defineComponent({
   name: "Home",
   components: {
     InputText
+  },
+  data() {
+    return {
+      inputPlayerName: "",
+      players: [
+        "Samuel Gustafsson",
+        "Emelie Jacobsson",
+        "Jesper Dahlström",
+        "Clara Roman Mood"
+      ]
+    };
+  },
+  methods: {
+    addPlayer() {
+      this.players.push(this.inputPlayerName);
+    }
   }
 });
 </script>
