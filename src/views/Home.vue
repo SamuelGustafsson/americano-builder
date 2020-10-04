@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
+  <InputText type="text" v-model="inputPlayerName" @keydown.enter="addPlayer" />
+  <ul>
+    <li v-for="player in players" :key="player">{{ player }}</li>
+  </ul>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import InputText from "@/components/InputText.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld
+    InputText
   }
 });
 </script>
